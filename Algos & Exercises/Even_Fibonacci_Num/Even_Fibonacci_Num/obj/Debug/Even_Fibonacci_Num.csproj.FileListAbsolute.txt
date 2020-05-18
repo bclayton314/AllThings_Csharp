@@ -1,0 +1,7 @@
+C:\Users\bclay\source\repos\Even_Fibonacci_Num\Even_Fibonacci_Num\bin\Debug\Even_Fibonacci_Num.exe.config
+C:\Users\bclay\source\repos\Even_Fibonacci_Num\Even_Fibonacci_Num\bin\Debug\Even_Fibonacci_Num.exe
+C:\Users\bclay\source\repos\Even_Fibonacci_Num\Even_Fibonacci_Num\bin\Debug\Even_Fibonacci_Num.pdb
+C:\Users\bclay\source\repos\Even_Fibonacci_Num\Even_Fibonacci_Num\obj\Debug\Even_Fibonacci_Num.csprojAssemblyReference.cache
+C:\Users\bclay\source\repos\Even_Fibonacci_Num\Even_Fibonacci_Num\obj\Debug\Even_Fibonacci_Num.csproj.CoreCompileInputs.cache
+C:\Users\bclay\source\repos\Even_Fibonacci_Num\Even_Fibonacci_Num\obj\Debug\Even_Fibonacci_Num.exe
+C:\Users\bclay\source\repos\Even_Fibonacci_Num\Even_Fibonacci_Num\obj\Debug\Even_Fibonacci_Num.pdb
