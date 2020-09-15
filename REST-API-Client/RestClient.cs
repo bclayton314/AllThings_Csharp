@@ -36,6 +36,7 @@ namespace CsharpRESTClient
         public authenticationTechnique authTech { get; set; }
         public string userName { get; set; }
         public string userPassword { get; set; }
+        public string postJSON { get; set; }
 
         public RestClient()
         {
@@ -53,6 +54,20 @@ namespace CsharpRESTClient
 
             String authHeader = System.Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes(userName + ":" + userPassword));
             request.Headers.Add("Authorization", authType.ToString() + " " + authHeader);
+
+
+            if(request.Method == "POST" && postJSON != string.Empty)
+            {
+                request.ContentType = "application/json";
+                using(StreamWriter swJSONPayload = new StreamWriter(request.GetRequestStream()))
+                {
+                    swJSONPayload.Write(postJSON);
+
+                    swJSONPayload.Close();
+                }
+            }
+
+
 
             HttpWebResponse response = null;
 

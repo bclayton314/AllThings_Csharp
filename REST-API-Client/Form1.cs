@@ -23,8 +23,18 @@ namespace CsharpRESTClient
         {
             RestClient rClient = new RestClient();
             rClient.endPoint = txtRequestURI.Text;
-            rClient.authTech = authenticationTechnique.RollYourOwn;
-            rClient.authType = authenticationType.Basic;
+            
+            switch(cboVerb.Text)
+            {
+                case "POST":
+                    rClient.httpMethod = httpVerb.POST;
+                    rClient.postJSON = txtPOSTData.Text;
+                    break;
+                default:
+                    rClient.httpMethod = httpVerb.GET;
+                    break;
+            }
+
             rClient.userName = txtUserName.Text;
             rClient.userPassword = txtPassword.Text;
 
@@ -35,6 +45,16 @@ namespace CsharpRESTClient
             strResponse = rClient.makeRequest();
 
             debugOutput(strResponse);
+        }
+
+        private void cmdClear_Click(object sender, EventArgs e)
+        {
+            txtResponse.Text = string.Empty;
+        }
+
+        private void cmdCopy_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Clipboard.SetText(txtResponse.Text);
         }
 
         #endregion
@@ -53,7 +73,6 @@ namespace CsharpRESTClient
                 System.Diagnostics.Debug.Write(ex.Message, ToString() + Environment.NewLine);
             }
         }
-
         
     }
 }
